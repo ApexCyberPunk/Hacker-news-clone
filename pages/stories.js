@@ -10,7 +10,7 @@ export default async function Stories(path) {
     const sF_V4Stories = await getStories(path)
     const hasStories = sF_V4Stories.length > 0;
    
-    view.innerHTML = `<div>${hasStories ? sF_V4Stories.map((story, i) => Story({...story, index: i + 1})) : "No Stories"}</div>`
+    view.innerHTML = `<div>${hasStories ? sF_V4Stories.map((story, i) => Story({...story, index: i + 1})).join('') : "No Stories"}</div>`
 
 }
 
