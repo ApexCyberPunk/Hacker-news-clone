@@ -7,5 +7,10 @@ export default function Item() {
 }
 
 function getStory() {
-    console.log(window.location)
+    // window.location.hash.split()
+    const storyId = window.location.hash.split('?id=')[1]
+    // console.log("location hash", window.location.hash)
+    // console.log("the id", storyId)
+    // /item/
+    fetch(`https://node-hnapi.herokuapp.com/item/${storyId}`)
 }
