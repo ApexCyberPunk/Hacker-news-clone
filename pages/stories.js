@@ -1,6 +1,6 @@
 import Story from '../components/Story.js'
 import view from '../utils/view.js'
-
+import baseURL from '../utils/baseURL.js'
 
 export default async function Stories(path) {
     // sF for stories function.. Stories.. V for variable
@@ -23,7 +23,7 @@ if (isHomeRoute) {
     path = '/newest'
 }
 
-const response = await fetch(`https://node-hnapi.herokuapp.com${path}`)
+const response = await fetch(`${baseURL}${path}`)
 // gS for get stories F for function V for variable gSFV_stories
 const gSFV_stories = await response.json()
 
